@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Gandhinagar Sports Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #1D4ED8;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header img {
+            width: 50px; /* Adjust the size of the logo */
+            height: auto;
+            vertical-align: middle;
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            display: inline-block;
+            margin: 0;
+            padding-left: 15px;
+            font-size: 28px;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .checkout-form, .order-summary {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #1D4ED8;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .order-summary {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .order-summary .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .order-summary .item:last-child {
+            font-weight: 600;
+            color: #1D4ED8;
+        }
+
+        .btn {
+            background-color: #1D4ED8;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #00397A;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <img src="gsa_logo.jpg" alt="Gandhinagar Sports Academy Logo">
+        <h1>Gandhinagar Sports Academy</h1>
+    </header>
+
+    <!-- Checkout Container -->
+    <div class="container">
+        <!-- Checkout Form -->
+        <div class="checkout-form">
+            <h2>Checkout</h2>
+            <form>
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="johndoe@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+91 1234567890" required>
+                </div>
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="1234 Main St, City, Country" required>
+                </div>
+                <div class="input-group">
+                    <label for="payment-method">Payment Method</label>
+                    <select id="payment-method" required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="debit-card">Debit Card</option>
+                        <option value="upi">UPI</option>
+                        <option value="net-banking">Net Banking</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="item">
+                <span>Turf Booking</span>
+                <span>₹4,000.00</span>
+            </div>
+            <div class="item">
+                <span>Cricket Academy Enrollment</span>
+                <span>₹8,000.00</span>
+            </div>
+            <div class="item">
+                <span>Football Academy Enrollment</span>
+                <span>₹8,000.00</span>
+            </div>
+            <div class="item">
+                <span>Total</span>
+                <span>₹20,000.00</span>
+            </div>
+            <button class="btn">Proceed to Payment</button>
+        </div>
+    </div>
+
+</body>
+</html>
